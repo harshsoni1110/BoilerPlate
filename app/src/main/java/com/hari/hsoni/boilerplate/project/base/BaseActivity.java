@@ -1,7 +1,8 @@
-package com.hari.hsoni.boilerplate.base;
+package com.hari.hsoni.boilerplate.project.base;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.StringRes;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -10,7 +11,7 @@ import android.support.v4.app.FragmentTransaction;
  * Created by HSoni on 12/4/2017.
  */
 
-public class BaseActivityPOC extends FragmentActivity implements FragmentStackInterface {
+public class BaseActivity extends FragmentActivity implements FragmentStackInterface, IBaseMvpView {
     FragmentManager fragmentManager;
     FragmentTransaction fragmentTransaction;
     protected BaseFragment mActiveFragment;
@@ -77,5 +78,15 @@ public class BaseActivityPOC extends FragmentActivity implements FragmentStackIn
 
     public boolean canGoBack (){
         return fragmentManager.getBackStackEntryCount() > 0;
+    }
+
+    @Override
+    public void onError(@StringRes int resId) {
+
+    }
+
+    @Override
+    public void onError(String errorMsg) {
+
     }
 }

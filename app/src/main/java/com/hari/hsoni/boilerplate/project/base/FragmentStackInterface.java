@@ -1,4 +1,4 @@
-package com.hari.hsoni.boilerplate.base;
+package com.hari.hsoni.boilerplate.project.base;
 
 /**
  * Created by HSoni on 12/4/2017.
